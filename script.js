@@ -6,10 +6,11 @@ var startQuiz = document.querySelector("#startQuiz");
 
 var mainContent = document.querySelector("#mainContent");
 
-var startScreen = document.createElement("startScreen");
     var startH1 = document.createElement("h1");
     var startContent = document.createElement("p");
     var startQuiz = document.createElement("button");
+
+
 
 startH1.textContent = "Coding Quiz Challenge"
 startContent.textContent = "Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will peanlize your score/time by ten seconds!"
