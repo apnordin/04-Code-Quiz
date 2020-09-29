@@ -1,53 +1,60 @@
-// Set initial variables
+var body = document.body;
 
-var highScores = document.querySelector("#highScores");
+// Set initial elements
+
+var highScoresbtn = document.querySelector("#highScoresbtn");
 var timeEl = document.querySelector("#timerDisplay");
 var startQuiz = document.querySelector("#startQuiz");
 var mainContent = document.querySelector("#mainContent");
 
-// Set start screen variables
+// Set start screen elements
 var startH1 = document.createElement("h1");
 var startContent = document.createElement("p");
 var startQuiz = document.createElement("button");
 
-// Set question 1 variables
+// Set question 1 elements
 var q1H1 = document.createElement("h1");
 var q1Opt1 = document.createElement("button");
 var q1Opt2 = document.createElement("button");
 var q1Opt3 = document.createElement("button");
 var q1Opt4 = document.createElement("button");
 
-// Set question 2 variables
+// Set question 2 elements
 var q2H1 = document.createElement("h1");
 var q2Opt1 = document.createElement("button");
 var q2Opt2 = document.createElement("button");
 var q2Opt3 = document.createElement("button");
 var q2Opt4 = document.createElement("button");
 
-// Set question 3 variables
+// Set question 3 elements
 var q3H1 = document.createElement("h1");
 var q3Opt1 = document.createElement("button");
 var q3Opt2 = document.createElement("button");
 var q3Opt3 = document.createElement("button");
 var q3Opt4 = document.createElement("button");
 
-// Set question 4 variables
+// Set question 4 elements
 var q4H1 = document.createElement("h1");
 var q4Opt1 = document.createElement("button");
 var q4Opt2 = document.createElement("button");
 var q4Opt3 = document.createElement("button");
 var q4Opt4 = document.createElement("button");
 
-// Set question 5 variables
+// Set question 5 elements
 var q5H1 = document.createElement("h1");
 var q5Opt1 = document.createElement("button");
 var q5Opt2 = document.createElement("button");
 var q5Opt3 = document.createElement("button");
 var q5Opt4 = document.createElement("button");
 
-// Set finish screen variables
+// Set finish screen elements
 var finishH1 = document.createElement("h1");
 var finishContent = document.createElement("p");
+var initialsForm = document.createElement("input");
+var submitButton = document.createElement("button");
+
+// Set High Score screen elements
+var 
 
 // Set the content of start screen
 startH1.textContent = "Coding Quiz Challenge"
@@ -385,17 +392,23 @@ q5Opt1.onclick = function Q5toFinish() {
     mainContent.removeChild(q5Opt3);
     mainContent.removeChild(q5Opt4);
 
-    mainContent.appendChild(finishH1);
-    mainContent.appendChild(finishContent);
     clearInterval(timerInterval);
     timeEl.textContent = '';
 
     // Set the content of the finish screen
-    finishH1.textContent = "All done!"
+    finishH1.textContent = 'All done!';
     finishContent.textContent = (`Your final score is ` + secondsLeft);
+    initialsForm.setAttribute('type', 'text');
+    initialsForm.setAttribute('placeholder', 'Enter Your Initials');
+    submitButton.textContent = 'Submit';
+
+    mainContent.appendChild(finishH1);
+    mainContent.appendChild(finishContent);
+    mainContent.appendChild(initialsForm);
+    mainContent.appendChild(submitButton);
 }
 
-// Correct answer Q2
+// Correct answer Q5
 q5Opt2.onclick = function Q5toFinish() {
     mainContent.removeChild(q5H1);
     mainContent.removeChild(q5Opt1);
@@ -408,9 +421,17 @@ q5Opt2.onclick = function Q5toFinish() {
     clearInterval(timerInterval);
     timeEl.textContent = '';
 
-    // Set the content of the finish screen
-    finishH1.textContent = "All done!"
+    finishH1.textContent = 'All done!';
     finishContent.textContent = (`Your final score is ` + secondsLeft);
+    initialsForm.setAttribute('type', 'text');
+    initialsForm.setAttribute('placeholder', 'Enter Your Initials');
+    submitButton.textContent = 'Submit';
+
+    mainContent.appendChild(finishH1);
+    mainContent.appendChild(finishContent);
+    mainContent.appendChild(initialsForm);
+    mainContent.appendChild(submitButton);
+    
 }
 
 q5Opt3.onclick = function Q5toFinish() {
@@ -426,9 +447,16 @@ q5Opt3.onclick = function Q5toFinish() {
     clearInterval(timerInterval);
     timeEl.textContent = '';
 
-    // Set the content of the finish screen
-    finishH1.textContent = "All done!"
-    finishContent.textContent = (`Your final score is ` + secondsLeft);    
+    finishH1.textContent = 'All done!';
+    finishContent.textContent = (`Your final score is ` + secondsLeft);
+    initialsForm.setAttribute('type', 'text');
+    initialsForm.setAttribute('placeholder', 'Enter Your Initials');
+    submitButton.textContent = 'Submit';
+
+    mainContent.appendChild(finishH1);
+    mainContent.appendChild(finishContent);
+    mainContent.appendChild(initialsForm);
+    mainContent.appendChild(submitButton); 
 }
 
 q5Opt4.onclick = function Q5toFinish() {
@@ -444,12 +472,22 @@ q5Opt4.onclick = function Q5toFinish() {
     clearInterval(timerInterval);
     timeEl.textContent = '';
 
-    // Set the content of the finish screen
-    finishH1.textContent = "All done!"
+    finishH1.textContent = 'All done!';
     finishContent.textContent = (`Your final score is ` + secondsLeft);
+    initialsForm.setAttribute('type', 'text');
+    initialsForm.setAttribute('placeholder', 'Enter Your Initials');
+    submitButton.textContent = 'Submit';
+
+    mainContent.appendChild(finishH1);
+    mainContent.appendChild(finishContent);
+    mainContent.appendChild(initialsForm);
+    mainContent.appendChild(submitButton);
 }
-
-
 
 // Close timer
-}
+};
+
+//
+
+// Element Styling
+
