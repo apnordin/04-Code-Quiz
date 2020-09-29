@@ -62,7 +62,7 @@ var clearHS = document.createElement("button");
 
 // Set the content of start screen
 startH1.textContent = "Coding Quiz Challenge"
-startContent.textContent = "Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will peanlize your score/time by ten seconds!"
+startContent.textContent = "Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will peanlize your score/time by fifteen seconds!"
 startQuiz.textContent = "Start Quiz"
 
 // Set the content of the Q1 screen
@@ -489,7 +489,7 @@ q5Opt4.onclick = function Q5toFinish() {
 // Close timer function
 };
 
-// Submit onclick
+// 'Submit' onclick
 submitButton.onclick = function FinishtoHS() {
     mainContent.removeChild(finishH1);
     mainContent.removeChild(finishContent);
@@ -498,6 +498,22 @@ submitButton.onclick = function FinishtoHS() {
 
     body.removeChild(nav);
 
+    body.appendChild(hsH1);
+    body.appendChild(hslistEl);
+    body.appendChild(goBack);
+    body.appendChild(clearHS);
+}
+
+// 'Go back' onclick
+goBack.onclick = function reload(){
+    location.reload();
+}
+
+// 'Clear highscores' onclick
+
+// 'View highscores' onclick
+highScoresbtn.onclick = function anytoHS() {
+    mainContent.innerHTML = "";
     body.appendChild(hsH1);
     body.appendChild(hslistEl);
     body.appendChild(goBack);
