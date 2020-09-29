@@ -6,6 +6,7 @@ var highScoresbtn = document.querySelector("#highScoresbtn");
 var timeEl = document.querySelector("#timerDisplay");
 var startQuiz = document.querySelector("#startQuiz");
 var mainContent = document.querySelector("#mainContent");
+var nav = document.querySelector("#olnavy");
 
 // Set start screen elements
 var startH1 = document.createElement("h1");
@@ -54,7 +55,10 @@ var initialsForm = document.createElement("input");
 var submitButton = document.createElement("button");
 
 // Set High Score screen elements
-var 
+var hsH1 = document.createElement("h1");
+var hslistEl = document.createElement("ol");
+var goBack = document.createElement("button");
+var clearHS = document.createElement("button");
 
 // Set the content of start screen
 startH1.textContent = "Coding Quiz Challenge"
@@ -96,7 +100,11 @@ q5Opt2.textContent = "Correct answer"
 q5Opt3.textContent = "Multiple Choice 3"
 q5Opt4.textContent = "Multiple Choice 4"
 
-
+// Set the content of the HS screen
+hsH1.textContent = "Highscores"
+hslistEl.textContent = "";
+goBack.textContent = "Go Back"
+clearHS.textContent = "Clear Highscores"
 
 // Append start screen elements
 mainContent.appendChild(startH1);
@@ -416,8 +424,6 @@ q5Opt2.onclick = function Q5toFinish() {
     mainContent.removeChild(q5Opt3);
     mainContent.removeChild(q5Opt4);
 
-    mainContent.appendChild(finishH1);
-    mainContent.appendChild(finishContent);
     clearInterval(timerInterval);
     timeEl.textContent = '';
 
@@ -442,8 +448,6 @@ q5Opt3.onclick = function Q5toFinish() {
     mainContent.removeChild(q5Opt3);
     mainContent.removeChild(q5Opt4);
 
-    mainContent.appendChild(finishH1);
-    mainContent.appendChild(finishContent);
     clearInterval(timerInterval);
     timeEl.textContent = '';
 
@@ -467,8 +471,6 @@ q5Opt4.onclick = function Q5toFinish() {
     mainContent.removeChild(q5Opt3);
     mainContent.removeChild(q5Opt4);
 
-    mainContent.appendChild(finishH1);
-    mainContent.appendChild(finishContent);
     clearInterval(timerInterval);
     timeEl.textContent = '';
 
@@ -484,10 +486,23 @@ q5Opt4.onclick = function Q5toFinish() {
     mainContent.appendChild(submitButton);
 }
 
-// Close timer
+// Close timer function
 };
 
-//
+// Submit onclick
+submitButton.onclick = function FinishtoHS() {
+    mainContent.removeChild(finishH1);
+    mainContent.removeChild(finishContent);
+    mainContent.removeChild(initialsForm);
+    mainContent.removeChild(submitButton);
+
+    body.removeChild(nav);
+
+    body.appendChild(hsH1);
+    body.appendChild(hslistEl);
+    body.appendChild(goBack);
+    body.appendChild(clearHS);
+}
 
 // Element Styling
 
