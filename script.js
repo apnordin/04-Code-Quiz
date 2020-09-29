@@ -58,7 +58,7 @@ var hsH1 = document.createElement("h1");
 var goBack = document.createElement("button");
 var clearHS = document.createElement("button");
 
-
+var hsList1 = document.createElement("p");
 
 
 
@@ -70,42 +70,42 @@ startContent.textContent = "Try to answer the following code-related questions w
 startQuiz.textContent = "Start Quiz"
 
 // Set the content of the Q1 screen
-q1H1.textContent = "First question here- placeholder text."
-q1Opt1.textContent = "Correct answer"
-q1Opt2.textContent = "Multiple Choice 2"
-q1Opt3.textContent = "Multiple Choice 3"
-q1Opt4.textContent = "Multiple Choice 4"
+q1H1.textContent = "What is NOT one of the five data types used in JavaScript?"
+q1Opt1.textContent = "Variables"
+q1Opt2.textContent = "Booleans"
+q1Opt3.textContent = "Objects"
+q1Opt4.textContent = "Arrays"
 
 // Set the content of the Q2 screen
-q2H1.textContent = "Second question here- placeholder text."
-q2Opt1.textContent = "Multiple Choice 1"
-q2Opt2.textContent = "Multiple Choice 2"
-q2Opt3.textContent = "Correct answer"
-q2Opt4.textContent = "Multiple Choice 4"
+q2H1.textContent = "To denote an array, what syntax should you use?"
+q2Opt1.textContent = "{}"
+q2Opt2.textContent = "<>"
+q2Opt3.textContent = "[]"
+q2Opt4.textContent = "()"
 
 // Set the content of the Q3 screen
-q3H1.textContent = "Third question here- placeholder text."
-q3Opt1.textContent = "Multiple Choice 1"
-q3Opt2.textContent = "Multiple Choice 2"
-q3Opt3.textContent = "Multiple Choice 3"
-q3Opt4.textContent = "Correct answer"
+q3H1.textContent = "JavaScript is one of the three main building blocks of Web Development. What is one of the other three?"
+q3Opt1.textContent = "SQL"
+q3Opt2.textContent = "Java"
+q3Opt3.textContent = "Political Facebook Posts"
+q3Opt4.textContent = "HTML"
 
 // Set the content of the Q4 screen
-q4H1.textContent = "Fourth question here- placeholder text."
-q4Opt1.textContent = "Multiple Choice 1"
-q4Opt2.textContent = "Multiple Choice 2"
-q4Opt3.textContent = "Multiple Choice 3"
-q4Opt4.textContent = "Correct answer"
+q4H1.textContent = "In 'function myFunction(p1, p2, p3, p4) {}', how many arguments/paramters exist?"
+q4Opt1.textContent = "One"
+q4Opt2.textContent = "Two"
+q4Opt3.textContent = "Three"
+q4Opt4.textContent = "Four"
 
 // Set the content of the Q5 screen
-q5H1.textContent = "Fifth question here- placeholder text."
-q5Opt1.textContent = "Multiple Choice 1"
-q5Opt2.textContent = "Correct answer"
-q5Opt3.textContent = "Multiple Choice 3"
-q5Opt4.textContent = "Multiple Choice 4"
+q5H1.textContent = "In 'var understands_jQuery = false', what is data type is 'false'?."
+q5Opt1.textContent = "String"
+q5Opt2.textContent = "Boolean"
+q5Opt3.textContent = "Object"
+q5Opt4.textContent = "Integer"
 
 // Set the content of the HS screen
-hsH1.textContent = "Highscores"
+hsH1.textContent = "High Scores"
 goBack.textContent = "Go Back"
 clearHS.textContent = "Clear Highscores"
 
@@ -417,21 +417,28 @@ startQuiz.onclick = function setTime() {
 
 
 
-
 // 'Submit' onclick
 submitButton.onclick = function FinishtoHS() {
     mainContent.innerHTML = "";
     body.removeChild(nav);
 
-    body.appendChild(hsH1);
-    body.appendChild(goBack);
-    body.appendChild(clearHS);
-
     var displayInitials = {
         userInput: initialsForm.value,
     };
     console.log(displayInitials);
+
+    hsList1.textContent = displayInitials.userInput;
+
+    body.appendChild(hsH1);
+    body.appendChild(hsList1)
+    body.appendChild(goBack);
+    body.appendChild(clearHS);
+
+
+
 }
+
+
 
 // 'Go back' onclick
 goBack.onclick = function reload() {
@@ -444,6 +451,7 @@ highScoresbtn.onclick = function anytoHS() {
     body.removeChild(nav);
 
     body.appendChild(hsH1);
+    body.appendChild(hsList1);
     body.appendChild(goBack);
     body.appendChild(clearHS);
 }
@@ -452,4 +460,35 @@ highScoresbtn.onclick = function anytoHS() {
 // 'Clear highscores' onclick
 
 // Element Styling
+
+mainContent.setAttribute("style", "text-align:center;");
+
+startQuiz.setAttribute("class", "btn-success m-3");
+
+q1Opt1.setAttribute("class", "btn-primary m-3");
+q1Opt2.setAttribute("class", "btn-primary m-3");
+q1Opt3.setAttribute("class", "btn-primary m-3");
+q1Opt4.setAttribute("class", "btn-primary m-3");
+
+q2Opt1.setAttribute("class", "btn-primary m-3");
+q2Opt2.setAttribute("class", "btn-primary m-3");
+q2Opt3.setAttribute("class", "btn-primary m-3");
+q2Opt4.setAttribute("class", "btn-primary m-3");
+
+q3Opt1.setAttribute("class", "btn-primary m-3");
+q3Opt2.setAttribute("class", "btn-primary m-3");
+q3Opt3.setAttribute("class", "btn-primary m-3");
+q3Opt4.setAttribute("class", "btn-primary m-3");
+
+q4Opt1.setAttribute("class", "btn-primary m-3");
+q4Opt2.setAttribute("class", "btn-primary m-3");
+q4Opt3.setAttribute("class", "btn-primary m-3");
+q4Opt4.setAttribute("class", "btn-primary m-3");
+
+q5Opt1.setAttribute("class", "btn-primary m-3");
+q5Opt2.setAttribute("class", "btn-primary m-3");
+q5Opt3.setAttribute("class", "btn-primary m-3");
+q5Opt4.setAttribute("class", "btn-primary m-3");
+
+submitButton.setAttribute("class", "btn-info m-3");
 
