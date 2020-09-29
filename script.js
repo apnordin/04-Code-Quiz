@@ -127,6 +127,7 @@ startQuiz.onclick = function setTime() {
 
 // Q1 Click Options
 
+//Correct answer Q1
 q1Opt1.onclick = function Q1toQ2() {
     mainContent.removeChild(q1H1);
     mainContent.removeChild(q1Opt1);
@@ -142,6 +143,7 @@ q1Opt1.onclick = function Q1toQ2() {
 }
 
 q1Opt2.onclick = function Q1toQ2() {
+    secondsLeft = secondsLeft - 15;
     mainContent.removeChild(q1H1);
     mainContent.removeChild(q1Opt1);
     mainContent.removeChild(q1Opt2);
@@ -152,10 +154,11 @@ q1Opt2.onclick = function Q1toQ2() {
     mainContent.appendChild(q2Opt1);
     mainContent.appendChild(q2Opt2);
     mainContent.appendChild(q2Opt3);
-    mainContent.appendChild(q2Opt4);   
+    mainContent.appendChild(q2Opt4);
 }
 
 q1Opt3.onclick = function Q1toQ2() {
+    secondsLeft = secondsLeft - 15;
     mainContent.removeChild(q1H1);
     mainContent.removeChild(q1Opt1);
     mainContent.removeChild(q1Opt2);
@@ -170,6 +173,7 @@ q1Opt3.onclick = function Q1toQ2() {
 }
 
 q1Opt4.onclick = function Q1toQ2() {
+    secondsLeft = secondsLeft - 15;
     mainContent.removeChild(q1H1);
     mainContent.removeChild(q1Opt1);
     mainContent.removeChild(q1Opt2);
@@ -187,6 +191,7 @@ q1Opt4.onclick = function Q1toQ2() {
 // Q2 Click Options
 
 q2Opt1.onclick = function Q2toQ3() {
+    secondsLeft = secondsLeft - 15;
     mainContent.removeChild(q2H1);
     mainContent.removeChild(q2Opt1);
     mainContent.removeChild(q2Opt2);
@@ -201,6 +206,7 @@ q2Opt1.onclick = function Q2toQ3() {
 }
 
 q2Opt2.onclick = function Q2toQ3() {
+    secondsLeft = secondsLeft - 15;
     mainContent.removeChild(q2H1);
     mainContent.removeChild(q2Opt1);
     mainContent.removeChild(q2Opt2);
@@ -214,6 +220,7 @@ q2Opt2.onclick = function Q2toQ3() {
     mainContent.appendChild(q3Opt4);   
 }
 
+// Correct answer Q2
 q2Opt3.onclick = function Q2toQ3() {
     mainContent.removeChild(q2H1);
     mainContent.removeChild(q2Opt1);
@@ -229,6 +236,7 @@ q2Opt3.onclick = function Q2toQ3() {
 }
 
 q2Opt4.onclick = function Q2toQ3() {
+    secondsLeft = secondsLeft - 15;
     mainContent.removeChild(q2H1);
     mainContent.removeChild(q2Opt1);
     mainContent.removeChild(q2Opt2);
@@ -246,6 +254,7 @@ q2Opt4.onclick = function Q2toQ3() {
 // Q3 Click Options
 
 q3Opt1.onclick = function Q3toQ4() {
+    secondsLeft = secondsLeft - 15;
     mainContent.removeChild(q3H1);
     mainContent.removeChild(q3Opt1);
     mainContent.removeChild(q3Opt2);
@@ -260,6 +269,7 @@ q3Opt1.onclick = function Q3toQ4() {
 }
 
 q3Opt2.onclick = function Q3toQ4() {
+    secondsLeft = secondsLeft - 15;
     mainContent.removeChild(q3H1);
     mainContent.removeChild(q3Opt1);
     mainContent.removeChild(q3Opt2);
@@ -274,6 +284,7 @@ q3Opt2.onclick = function Q3toQ4() {
 }
 
 q3Opt3.onclick = function Q3toQ4() {
+    secondsLeft = secondsLeft - 15;
     mainContent.removeChild(q3H1);
     mainContent.removeChild(q3Opt1);
     mainContent.removeChild(q3Opt2);
@@ -287,6 +298,7 @@ q3Opt3.onclick = function Q3toQ4() {
     mainContent.appendChild(q4Opt4);   
 }
 
+// Correct answer Q3
 q3Opt4.onclick = function Q3toQ4() {
     mainContent.removeChild(q3H1);
     mainContent.removeChild(q3Opt1);
@@ -305,6 +317,7 @@ q3Opt4.onclick = function Q3toQ4() {
 // Q4 Click Options
 
 q4Opt1.onclick = function Q4toQ5() {
+    secondsLeft = secondsLeft - 15;
     mainContent.removeChild(q4H1);
     mainContent.removeChild(q4Opt1);
     mainContent.removeChild(q4Opt2);
@@ -319,6 +332,7 @@ q4Opt1.onclick = function Q4toQ5() {
 }
 
 q4Opt2.onclick = function Q4toQ5() {
+    secondsLeft = secondsLeft - 15;
     mainContent.removeChild(q4H1);
     mainContent.removeChild(q4Opt1);
     mainContent.removeChild(q4Opt2);
@@ -333,6 +347,7 @@ q4Opt2.onclick = function Q4toQ5() {
 }
 
 q4Opt3.onclick = function Q4toQ5() {
+    secondsLeft = secondsLeft - 15;
     mainContent.removeChild(q4H1);
     mainContent.removeChild(q4Opt1);
     mainContent.removeChild(q4Opt2);
@@ -346,6 +361,7 @@ q4Opt3.onclick = function Q4toQ5() {
     mainContent.appendChild(q5Opt4);
 }
 
+// Correct answer Q4
 q4Opt4.onclick = function Q4toQ5() {
     mainContent.removeChild(q4H1);
     mainContent.removeChild(q4Opt1);
@@ -364,6 +380,7 @@ q4Opt4.onclick = function Q4toQ5() {
 // Q5 Click Options
 
 q5Opt1.onclick = function Q5toFinish() {
+    secondsLeft = secondsLeft - 15;
     mainContent.removeChild(q5H1);
     mainContent.removeChild(q5Opt1);
     mainContent.removeChild(q5Opt2);
@@ -375,6 +392,43 @@ q5Opt1.onclick = function Q5toFinish() {
     clearInterval(timerInterval);
 }
 
+// Correct answer Q2
+q5Opt2.onclick = function Q5toFinish() {
+    mainContent.removeChild(q5H1);
+    mainContent.removeChild(q5Opt1);
+    mainContent.removeChild(q5Opt2);
+    mainContent.removeChild(q5Opt3);
+    mainContent.removeChild(q5Opt4);
 
+    mainContent.appendChild(finishH1);
+    mainContent.appendChild(finishContent);
+    clearInterval(timerInterval);
+}
+
+q5Opt3.onclick = function Q5toFinish() {
+    secondsLeft = secondsLeft - 15;
+    mainContent.removeChild(q5H1);
+    mainContent.removeChild(q5Opt1);
+    mainContent.removeChild(q5Opt2);
+    mainContent.removeChild(q5Opt3);
+    mainContent.removeChild(q5Opt4);
+
+    mainContent.appendChild(finishH1);
+    mainContent.appendChild(finishContent);
+    clearInterval(timerInterval);
+}
+
+q5Opt4.onclick = function Q5toFinish() {
+    secondsLeft = secondsLeft - 15;
+    mainContent.removeChild(q5H1);
+    mainContent.removeChild(q5Opt1);
+    mainContent.removeChild(q5Opt2);
+    mainContent.removeChild(q5Opt3);
+    mainContent.removeChild(q5Opt4);
+
+    mainContent.appendChild(finishH1);
+    mainContent.appendChild(finishContent);
+    clearInterval(timerInterval);
+}
 
 }
