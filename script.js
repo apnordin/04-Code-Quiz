@@ -89,9 +89,7 @@ q5Opt2.textContent = "Correct answer"
 q5Opt3.textContent = "Multiple Choice 3"
 q5Opt4.textContent = "Multiple Choice 4"
 
-// Set the content of the finish screen
-finishH1.textContent = "All done!"
-finishContent.textContent = ("Your final score is ");
+
 
 // Append start screen elements
 mainContent.appendChild(startH1);
@@ -390,6 +388,11 @@ q5Opt1.onclick = function Q5toFinish() {
     mainContent.appendChild(finishH1);
     mainContent.appendChild(finishContent);
     clearInterval(timerInterval);
+    timeEl.textContent = '';
+
+    // Set the content of the finish screen
+    finishH1.textContent = "All done!"
+    finishContent.textContent = (`Your final score is ` + secondsLeft);
 }
 
 // Correct answer Q2
@@ -403,6 +406,11 @@ q5Opt2.onclick = function Q5toFinish() {
     mainContent.appendChild(finishH1);
     mainContent.appendChild(finishContent);
     clearInterval(timerInterval);
+    timeEl.textContent = '';
+
+    // Set the content of the finish screen
+    finishH1.textContent = "All done!"
+    finishContent.textContent = (`Your final score is ` + secondsLeft);
 }
 
 q5Opt3.onclick = function Q5toFinish() {
@@ -416,6 +424,11 @@ q5Opt3.onclick = function Q5toFinish() {
     mainContent.appendChild(finishH1);
     mainContent.appendChild(finishContent);
     clearInterval(timerInterval);
+    timeEl.textContent = '';
+
+    // Set the content of the finish screen
+    finishH1.textContent = "All done!"
+    finishContent.textContent = (`Your final score is ` + secondsLeft);    
 }
 
 q5Opt4.onclick = function Q5toFinish() {
@@ -429,6 +442,14 @@ q5Opt4.onclick = function Q5toFinish() {
     mainContent.appendChild(finishH1);
     mainContent.appendChild(finishContent);
     clearInterval(timerInterval);
+    timeEl.textContent = '';
+
+    // Set the content of the finish screen
+    finishH1.textContent = "All done!"
+    finishContent.textContent = (`Your final score is ` + secondsLeft);
 }
 
+
+
+// Close timer
 }
