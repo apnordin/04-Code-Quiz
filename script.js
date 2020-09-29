@@ -1,12 +1,11 @@
 var body = document.body;
 
 // Set initial elements
-
+var nav = document.querySelector("#olnavy");
 var highScoresbtn = document.querySelector("#highScoresbtn");
 var timeEl = document.querySelector("#timerDisplay");
 var startQuiz = document.querySelector("#startQuiz");
 var mainContent = document.querySelector("#mainContent");
-var nav = document.querySelector("#olnavy");
 
 // Set start screen elements
 var startH1 = document.createElement("h1");
@@ -56,9 +55,14 @@ var submitButton = document.createElement("button");
 
 // Set High Score screen elements
 var hsH1 = document.createElement("h1");
-var hslistEl = document.createElement("ol");
 var goBack = document.createElement("button");
 var clearHS = document.createElement("button");
+
+
+
+
+
+
 
 // Set the content of start screen
 startH1.textContent = "Coding Quiz Challenge"
@@ -102,9 +106,9 @@ q5Opt4.textContent = "Multiple Choice 4"
 
 // Set the content of the HS screen
 hsH1.textContent = "Highscores"
-hslistEl.textContent = "";
 goBack.textContent = "Go Back"
 clearHS.textContent = "Clear Highscores"
+
 
 // Append start screen elements
 mainContent.appendChild(startH1);
@@ -116,19 +120,17 @@ mainContent.appendChild(startQuiz);
 var secondsLeft = 75;
 
 startQuiz.onclick = function setTime() {
-    var timerInterval = setInterval(function() {
+    var timerInterval = setInterval(function () {
         secondsLeft--;
         timeEl.textContent = secondsLeft;
 
-        if(secondsLeft === 0) {
+        if (secondsLeft === 0) {
             clearInterval(timerInterval);
         }
 
     }, 1000);
 
-    mainContent.removeChild(startH1);
-    mainContent.removeChild(startContent);
-    mainContent.removeChild(startQuiz);
+    mainContent.innerHTML = "";
 
     mainContent.appendChild(q1H1);
     mainContent.appendChild(q1Opt1);
@@ -138,387 +140,316 @@ startQuiz.onclick = function setTime() {
 
 
 
-// Q1 Click Options
+    // Q1 Click Options
 
-//Correct answer Q1
-q1Opt1.onclick = function Q1toQ2() {
-    mainContent.removeChild(q1H1);
-    mainContent.removeChild(q1Opt1);
-    mainContent.removeChild(q1Opt2);
-    mainContent.removeChild(q1Opt3);
-    mainContent.removeChild(q1Opt4);
+    //Correct answer Q1
+    q1Opt1.onclick = function Q1toQ2() {
+        mainContent.innerHTML = "";
 
-    mainContent.appendChild(q2H1);
-    mainContent.appendChild(q2Opt1);
-    mainContent.appendChild(q2Opt2);
-    mainContent.appendChild(q2Opt3);
-    mainContent.appendChild(q2Opt4);   
-}
+        mainContent.appendChild(q2H1);
+        mainContent.appendChild(q2Opt1);
+        mainContent.appendChild(q2Opt2);
+        mainContent.appendChild(q2Opt3);
+        mainContent.appendChild(q2Opt4);
+    }
 
-q1Opt2.onclick = function Q1toQ2() {
-    secondsLeft = secondsLeft - 15;
-    mainContent.removeChild(q1H1);
-    mainContent.removeChild(q1Opt1);
-    mainContent.removeChild(q1Opt2);
-    mainContent.removeChild(q1Opt3);
-    mainContent.removeChild(q1Opt4);
+    q1Opt2.onclick = function Q1toQ2() {
+        secondsLeft = secondsLeft - 15;
+        mainContent.innerHTML = "";
 
-    mainContent.appendChild(q2H1);
-    mainContent.appendChild(q2Opt1);
-    mainContent.appendChild(q2Opt2);
-    mainContent.appendChild(q2Opt3);
-    mainContent.appendChild(q2Opt4);
-}
+        mainContent.appendChild(q2H1);
+        mainContent.appendChild(q2Opt1);
+        mainContent.appendChild(q2Opt2);
+        mainContent.appendChild(q2Opt3);
+        mainContent.appendChild(q2Opt4);
+    }
 
-q1Opt3.onclick = function Q1toQ2() {
-    secondsLeft = secondsLeft - 15;
-    mainContent.removeChild(q1H1);
-    mainContent.removeChild(q1Opt1);
-    mainContent.removeChild(q1Opt2);
-    mainContent.removeChild(q1Opt3);
-    mainContent.removeChild(q1Opt4);
+    q1Opt3.onclick = function Q1toQ2() {
+        secondsLeft = secondsLeft - 15;
+        mainContent.innerHTML = "";
 
-    mainContent.appendChild(q2H1);
-    mainContent.appendChild(q2Opt1);
-    mainContent.appendChild(q2Opt2);
-    mainContent.appendChild(q2Opt3);
-    mainContent.appendChild(q2Opt4);   
-}
+        mainContent.appendChild(q2H1);
+        mainContent.appendChild(q2Opt1);
+        mainContent.appendChild(q2Opt2);
+        mainContent.appendChild(q2Opt3);
+        mainContent.appendChild(q2Opt4);
+    }
 
-q1Opt4.onclick = function Q1toQ2() {
-    secondsLeft = secondsLeft - 15;
-    mainContent.removeChild(q1H1);
-    mainContent.removeChild(q1Opt1);
-    mainContent.removeChild(q1Opt2);
-    mainContent.removeChild(q1Opt3);
-    mainContent.removeChild(q1Opt4);
+    q1Opt4.onclick = function Q1toQ2() {
+        secondsLeft = secondsLeft - 15;
+        mainContent.innerHTML = "";
 
-    mainContent.appendChild(q2H1);
-    mainContent.appendChild(q2Opt1);
-    mainContent.appendChild(q2Opt2);
-    mainContent.appendChild(q2Opt3);
-    mainContent.appendChild(q2Opt4);   
-}
+        mainContent.appendChild(q2H1);
+        mainContent.appendChild(q2Opt1);
+        mainContent.appendChild(q2Opt2);
+        mainContent.appendChild(q2Opt3);
+        mainContent.appendChild(q2Opt4);
+    }
 
 
-// Q2 Click Options
+    // Q2 Click Options
 
-q2Opt1.onclick = function Q2toQ3() {
-    secondsLeft = secondsLeft - 15;
-    mainContent.removeChild(q2H1);
-    mainContent.removeChild(q2Opt1);
-    mainContent.removeChild(q2Opt2);
-    mainContent.removeChild(q2Opt3);
-    mainContent.removeChild(q2Opt4);
+    q2Opt1.onclick = function Q2toQ3() {
+        secondsLeft = secondsLeft - 15;
+        mainContent.innerHTML = "";
 
-    mainContent.appendChild(q3H1);
-    mainContent.appendChild(q3Opt1);
-    mainContent.appendChild(q3Opt2);
-    mainContent.appendChild(q3Opt3);
-    mainContent.appendChild(q3Opt4);   
-}
+        mainContent.appendChild(q3H1);
+        mainContent.appendChild(q3Opt1);
+        mainContent.appendChild(q3Opt2);
+        mainContent.appendChild(q3Opt3);
+        mainContent.appendChild(q3Opt4);
+    }
 
-q2Opt2.onclick = function Q2toQ3() {
-    secondsLeft = secondsLeft - 15;
-    mainContent.removeChild(q2H1);
-    mainContent.removeChild(q2Opt1);
-    mainContent.removeChild(q2Opt2);
-    mainContent.removeChild(q2Opt3);
-    mainContent.removeChild(q2Opt4);
+    q2Opt2.onclick = function Q2toQ3() {
+        secondsLeft = secondsLeft - 15;
+        mainContent.innerHTML = "";
 
-    mainContent.appendChild(q3H1);
-    mainContent.appendChild(q3Opt1);
-    mainContent.appendChild(q3Opt2);
-    mainContent.appendChild(q3Opt3);
-    mainContent.appendChild(q3Opt4);   
-}
+        mainContent.appendChild(q3H1);
+        mainContent.appendChild(q3Opt1);
+        mainContent.appendChild(q3Opt2);
+        mainContent.appendChild(q3Opt3);
+        mainContent.appendChild(q3Opt4);
+    }
 
-// Correct answer Q2
-q2Opt3.onclick = function Q2toQ3() {
-    mainContent.removeChild(q2H1);
-    mainContent.removeChild(q2Opt1);
-    mainContent.removeChild(q2Opt2);
-    mainContent.removeChild(q2Opt3);
-    mainContent.removeChild(q2Opt4);
+    // Correct answer Q2
+    q2Opt3.onclick = function Q2toQ3() {
+        mainContent.innerHTML = "";
 
-    mainContent.appendChild(q3H1);
-    mainContent.appendChild(q3Opt1);
-    mainContent.appendChild(q3Opt2);
-    mainContent.appendChild(q3Opt3);
-    mainContent.appendChild(q3Opt4);   
-}
+        mainContent.appendChild(q3H1);
+        mainContent.appendChild(q3Opt1);
+        mainContent.appendChild(q3Opt2);
+        mainContent.appendChild(q3Opt3);
+        mainContent.appendChild(q3Opt4);
+    }
 
-q2Opt4.onclick = function Q2toQ3() {
-    secondsLeft = secondsLeft - 15;
-    mainContent.removeChild(q2H1);
-    mainContent.removeChild(q2Opt1);
-    mainContent.removeChild(q2Opt2);
-    mainContent.removeChild(q2Opt3);
-    mainContent.removeChild(q2Opt4);
+    q2Opt4.onclick = function Q2toQ3() {
+        secondsLeft = secondsLeft - 15;
+        mainContent.innerHTML = "";
 
-    mainContent.appendChild(q3H1);
-    mainContent.appendChild(q3Opt1);
-    mainContent.appendChild(q3Opt2);
-    mainContent.appendChild(q3Opt3);
-    mainContent.appendChild(q3Opt4);   
-}
+        mainContent.appendChild(q3H1);
+        mainContent.appendChild(q3Opt1);
+        mainContent.appendChild(q3Opt2);
+        mainContent.appendChild(q3Opt3);
+        mainContent.appendChild(q3Opt4);
+    }
 
 
-// Q3 Click Options
+    // Q3 Click Options
 
-q3Opt1.onclick = function Q3toQ4() {
-    secondsLeft = secondsLeft - 15;
-    mainContent.removeChild(q3H1);
-    mainContent.removeChild(q3Opt1);
-    mainContent.removeChild(q3Opt2);
-    mainContent.removeChild(q3Opt3);
-    mainContent.removeChild(q3Opt4);
+    q3Opt1.onclick = function Q3toQ4() {
+        secondsLeft = secondsLeft - 15;
+        mainContent.innerHTML = "";
 
-    mainContent.appendChild(q4H1);
-    mainContent.appendChild(q4Opt1);
-    mainContent.appendChild(q4Opt2);
-    mainContent.appendChild(q4Opt3);
-    mainContent.appendChild(q4Opt4);   
-}
+        mainContent.appendChild(q4H1);
+        mainContent.appendChild(q4Opt1);
+        mainContent.appendChild(q4Opt2);
+        mainContent.appendChild(q4Opt3);
+        mainContent.appendChild(q4Opt4);
+    }
 
-q3Opt2.onclick = function Q3toQ4() {
-    secondsLeft = secondsLeft - 15;
-    mainContent.removeChild(q3H1);
-    mainContent.removeChild(q3Opt1);
-    mainContent.removeChild(q3Opt2);
-    mainContent.removeChild(q3Opt3);
-    mainContent.removeChild(q3Opt4);
+    q3Opt2.onclick = function Q3toQ4() {
+        secondsLeft = secondsLeft - 15;
+        mainContent.innerHTML = "";
 
-    mainContent.appendChild(q4H1);
-    mainContent.appendChild(q4Opt1);
-    mainContent.appendChild(q4Opt2);
-    mainContent.appendChild(q4Opt3);
-    mainContent.appendChild(q4Opt4);   
-}
+        mainContent.appendChild(q4H1);
+        mainContent.appendChild(q4Opt1);
+        mainContent.appendChild(q4Opt2);
+        mainContent.appendChild(q4Opt3);
+        mainContent.appendChild(q4Opt4);
+    }
 
-q3Opt3.onclick = function Q3toQ4() {
-    secondsLeft = secondsLeft - 15;
-    mainContent.removeChild(q3H1);
-    mainContent.removeChild(q3Opt1);
-    mainContent.removeChild(q3Opt2);
-    mainContent.removeChild(q3Opt3);
-    mainContent.removeChild(q3Opt4);
+    q3Opt3.onclick = function Q3toQ4() {
+        secondsLeft = secondsLeft - 15;
+        mainContent.innerHTML = "";
 
-    mainContent.appendChild(q4H1);
-    mainContent.appendChild(q4Opt1);
-    mainContent.appendChild(q4Opt2);
-    mainContent.appendChild(q4Opt3);
-    mainContent.appendChild(q4Opt4);   
-}
+        mainContent.appendChild(q4H1);
+        mainContent.appendChild(q4Opt1);
+        mainContent.appendChild(q4Opt2);
+        mainContent.appendChild(q4Opt3);
+        mainContent.appendChild(q4Opt4);
+    }
 
-// Correct answer Q3
-q3Opt4.onclick = function Q3toQ4() {
-    mainContent.removeChild(q3H1);
-    mainContent.removeChild(q3Opt1);
-    mainContent.removeChild(q3Opt2);
-    mainContent.removeChild(q3Opt3);
-    mainContent.removeChild(q3Opt4);
+    // Correct answer Q3
+    q3Opt4.onclick = function Q3toQ4() {
+        mainContent.innerHTML = "";
 
-    mainContent.appendChild(q4H1);
-    mainContent.appendChild(q4Opt1);
-    mainContent.appendChild(q4Opt2);
-    mainContent.appendChild(q4Opt3);
-    mainContent.appendChild(q4Opt4);   
-}
+        mainContent.appendChild(q4H1);
+        mainContent.appendChild(q4Opt1);
+        mainContent.appendChild(q4Opt2);
+        mainContent.appendChild(q4Opt3);
+        mainContent.appendChild(q4Opt4);
+    }
 
 
-// Q4 Click Options
+    // Q4 Click Options
 
-q4Opt1.onclick = function Q4toQ5() {
-    secondsLeft = secondsLeft - 15;
-    mainContent.removeChild(q4H1);
-    mainContent.removeChild(q4Opt1);
-    mainContent.removeChild(q4Opt2);
-    mainContent.removeChild(q4Opt3);
-    mainContent.removeChild(q4Opt4);
+    q4Opt1.onclick = function Q4toQ5() {
+        secondsLeft = secondsLeft - 15;
+        mainContent.innerHTML = "";
 
-    mainContent.appendChild(q5H1);
-    mainContent.appendChild(q5Opt1);
-    mainContent.appendChild(q5Opt2);
-    mainContent.appendChild(q5Opt3);
-    mainContent.appendChild(q5Opt4);
-}
+        mainContent.appendChild(q5H1);
+        mainContent.appendChild(q5Opt1);
+        mainContent.appendChild(q5Opt2);
+        mainContent.appendChild(q5Opt3);
+        mainContent.appendChild(q5Opt4);
+    }
 
-q4Opt2.onclick = function Q4toQ5() {
-    secondsLeft = secondsLeft - 15;
-    mainContent.removeChild(q4H1);
-    mainContent.removeChild(q4Opt1);
-    mainContent.removeChild(q4Opt2);
-    mainContent.removeChild(q4Opt3);
-    mainContent.removeChild(q4Opt4);
+    q4Opt2.onclick = function Q4toQ5() {
+        secondsLeft = secondsLeft - 15;
+        mainContent.innerHTML = "";
 
-    mainContent.appendChild(q5H1);
-    mainContent.appendChild(q5Opt1);
-    mainContent.appendChild(q5Opt2);
-    mainContent.appendChild(q5Opt3);
-    mainContent.appendChild(q5Opt4);
-}
+        mainContent.appendChild(q5H1);
+        mainContent.appendChild(q5Opt1);
+        mainContent.appendChild(q5Opt2);
+        mainContent.appendChild(q5Opt3);
+        mainContent.appendChild(q5Opt4);
+    }
 
-q4Opt3.onclick = function Q4toQ5() {
-    secondsLeft = secondsLeft - 15;
-    mainContent.removeChild(q4H1);
-    mainContent.removeChild(q4Opt1);
-    mainContent.removeChild(q4Opt2);
-    mainContent.removeChild(q4Opt3);
-    mainContent.removeChild(q4Opt4);
+    q4Opt3.onclick = function Q4toQ5() {
+        secondsLeft = secondsLeft - 15;
+        mainContent.innerHTML = "";
 
-    mainContent.appendChild(q5H1);
-    mainContent.appendChild(q5Opt1);
-    mainContent.appendChild(q5Opt2);
-    mainContent.appendChild(q5Opt3);
-    mainContent.appendChild(q5Opt4);
-}
+        mainContent.appendChild(q5H1);
+        mainContent.appendChild(q5Opt1);
+        mainContent.appendChild(q5Opt2);
+        mainContent.appendChild(q5Opt3);
+        mainContent.appendChild(q5Opt4);
+    }
 
-// Correct answer Q4
-q4Opt4.onclick = function Q4toQ5() {
-    mainContent.removeChild(q4H1);
-    mainContent.removeChild(q4Opt1);
-    mainContent.removeChild(q4Opt2);
-    mainContent.removeChild(q4Opt3);
-    mainContent.removeChild(q4Opt4);
+    // Correct answer Q4
+    q4Opt4.onclick = function Q4toQ5() {
+        mainContent.innerHTML = "";
 
-    mainContent.appendChild(q5H1);
-    mainContent.appendChild(q5Opt1);
-    mainContent.appendChild(q5Opt2);
-    mainContent.appendChild(q5Opt3);
-    mainContent.appendChild(q5Opt4);
-}
+        mainContent.appendChild(q5H1);
+        mainContent.appendChild(q5Opt1);
+        mainContent.appendChild(q5Opt2);
+        mainContent.appendChild(q5Opt3);
+        mainContent.appendChild(q5Opt4);
+    }
 
 
-// Q5 Click Options
+    // Q5 Click Options
 
-q5Opt1.onclick = function Q5toFinish() {
-    secondsLeft = secondsLeft - 15;
-    mainContent.removeChild(q5H1);
-    mainContent.removeChild(q5Opt1);
-    mainContent.removeChild(q5Opt2);
-    mainContent.removeChild(q5Opt3);
-    mainContent.removeChild(q5Opt4);
+    q5Opt1.onclick = function Q5toFinish() {
+        secondsLeft = secondsLeft - 15;
+        mainContent.innerHTML = "";
 
-    clearInterval(timerInterval);
-    timeEl.textContent = '';
+        clearInterval(timerInterval);
+        timeEl.textContent = '';
 
-    // Set the content of the finish screen
-    finishH1.textContent = 'All done!';
-    finishContent.textContent = (`Your final score is ` + secondsLeft);
-    initialsForm.setAttribute('type', 'text');
-    initialsForm.setAttribute('placeholder', 'Enter Your Initials');
-    submitButton.textContent = 'Submit';
+        // Set the content of the finish screen
+        finishH1.textContent = 'All done!';
+        finishContent.textContent = (`Your final score is ` + secondsLeft);
+        initialsForm.setAttribute('type', 'text');
+        initialsForm.setAttribute('id', 'initials')
+        initialsForm.setAttribute('placeholder', 'Enter Your Initials');
+        submitButton.textContent = 'Submit';
 
-    mainContent.appendChild(finishH1);
-    mainContent.appendChild(finishContent);
-    mainContent.appendChild(initialsForm);
-    mainContent.appendChild(submitButton);
-}
+        mainContent.appendChild(finishH1);
+        mainContent.appendChild(finishContent);
+        mainContent.appendChild(initialsForm);
+        mainContent.appendChild(submitButton);
+    }
 
-// Correct answer Q5
-q5Opt2.onclick = function Q5toFinish() {
-    mainContent.removeChild(q5H1);
-    mainContent.removeChild(q5Opt1);
-    mainContent.removeChild(q5Opt2);
-    mainContent.removeChild(q5Opt3);
-    mainContent.removeChild(q5Opt4);
+    // Correct answer Q5
+    q5Opt2.onclick = function Q5toFinish() {
+        mainContent.innerHTML = "";
 
-    clearInterval(timerInterval);
-    timeEl.textContent = '';
+        clearInterval(timerInterval);
+        timeEl.textContent = '';
 
-    finishH1.textContent = 'All done!';
-    finishContent.textContent = (`Your final score is ` + secondsLeft);
-    initialsForm.setAttribute('type', 'text');
-    initialsForm.setAttribute('placeholder', 'Enter Your Initials');
-    submitButton.textContent = 'Submit';
+        finishH1.textContent = 'All done!';
+        finishContent.textContent = (`Your final score is ` + secondsLeft);
+        initialsForm.setAttribute('type', 'text');
+        initialsForm.setAttribute('id', 'initials')
+        initialsForm.setAttribute('placeholder', 'Enter Your Initials');
+        submitButton.textContent = 'Submit';
 
-    mainContent.appendChild(finishH1);
-    mainContent.appendChild(finishContent);
-    mainContent.appendChild(initialsForm);
-    mainContent.appendChild(submitButton);
-    
-}
+        mainContent.appendChild(finishH1);
+        mainContent.appendChild(finishContent);
+        mainContent.appendChild(initialsForm);
+        mainContent.appendChild(submitButton);
 
-q5Opt3.onclick = function Q5toFinish() {
-    secondsLeft = secondsLeft - 15;
-    mainContent.removeChild(q5H1);
-    mainContent.removeChild(q5Opt1);
-    mainContent.removeChild(q5Opt2);
-    mainContent.removeChild(q5Opt3);
-    mainContent.removeChild(q5Opt4);
+    }
 
-    clearInterval(timerInterval);
-    timeEl.textContent = '';
+    q5Opt3.onclick = function Q5toFinish() {
+        secondsLeft = secondsLeft - 15;
+        mainContent.innerHTML = "";
 
-    finishH1.textContent = 'All done!';
-    finishContent.textContent = (`Your final score is ` + secondsLeft);
-    initialsForm.setAttribute('type', 'text');
-    initialsForm.setAttribute('placeholder', 'Enter Your Initials');
-    submitButton.textContent = 'Submit';
+        clearInterval(timerInterval);
+        timeEl.textContent = '';
 
-    mainContent.appendChild(finishH1);
-    mainContent.appendChild(finishContent);
-    mainContent.appendChild(initialsForm);
-    mainContent.appendChild(submitButton); 
-}
+        finishH1.textContent = 'All done!';
+        finishContent.textContent = (`Your final score is ` + secondsLeft);
+        initialsForm.setAttribute('type', 'text');
+        initialsForm.setAttribute('id', 'initials')
+        initialsForm.setAttribute('placeholder', 'Enter Your Initials');
+        submitButton.textContent = 'Submit';
 
-q5Opt4.onclick = function Q5toFinish() {
-    secondsLeft = secondsLeft - 15;
-    mainContent.removeChild(q5H1);
-    mainContent.removeChild(q5Opt1);
-    mainContent.removeChild(q5Opt2);
-    mainContent.removeChild(q5Opt3);
-    mainContent.removeChild(q5Opt4);
+        mainContent.appendChild(finishH1);
+        mainContent.appendChild(finishContent);
+        mainContent.appendChild(initialsForm);
+        mainContent.appendChild(submitButton);
+    }
 
-    clearInterval(timerInterval);
-    timeEl.textContent = '';
+    q5Opt4.onclick = function Q5toFinish() {
+        secondsLeft = secondsLeft - 15;
+        mainContent.innerHTML = "";
 
-    finishH1.textContent = 'All done!';
-    finishContent.textContent = (`Your final score is ` + secondsLeft);
-    initialsForm.setAttribute('type', 'text');
-    initialsForm.setAttribute('placeholder', 'Enter Your Initials');
-    submitButton.textContent = 'Submit';
+        clearInterval(timerInterval);
+        timeEl.textContent = '';
 
-    mainContent.appendChild(finishH1);
-    mainContent.appendChild(finishContent);
-    mainContent.appendChild(initialsForm);
-    mainContent.appendChild(submitButton);
-}
+        finishH1.textContent = 'All done!';
+        finishContent.textContent = (`Your final score is ` + secondsLeft);
+        initialsForm.setAttribute('type', 'text');
+        initialsForm.setAttribute('id', 'initials');
+        initialsForm.setAttribute('placeholder', 'Enter Your Initials');
+        submitButton.textContent = 'Submit';
 
-// Close timer function
+        mainContent.appendChild(finishH1);
+        mainContent.appendChild(finishContent);
+        mainContent.appendChild(initialsForm);
+        mainContent.appendChild(submitButton);
+    }
+
+    // Close timer function
 };
+
+
+
 
 // 'Submit' onclick
 submitButton.onclick = function FinishtoHS() {
-    mainContent.removeChild(finishH1);
-    mainContent.removeChild(finishContent);
-    mainContent.removeChild(initialsForm);
-    mainContent.removeChild(submitButton);
-
+    mainContent.innerHTML = "";
     body.removeChild(nav);
 
     body.appendChild(hsH1);
-    body.appendChild(hslistEl);
     body.appendChild(goBack);
     body.appendChild(clearHS);
+
+    var displayInitials = {
+        userInput: initialsForm.value,
+    };
+    console.log(displayInitials);
 }
 
 // 'Go back' onclick
-goBack.onclick = function reload(){
+goBack.onclick = function reload() {
     location.reload();
 }
-
-// 'Clear highscores' onclick
 
 // 'View highscores' onclick
 highScoresbtn.onclick = function anytoHS() {
     mainContent.innerHTML = "";
+    body.removeChild(nav);
+
     body.appendChild(hsH1);
-    body.appendChild(hslistEl);
     body.appendChild(goBack);
     body.appendChild(clearHS);
 }
+
+
+// 'Clear highscores' onclick
 
 // Element Styling
 

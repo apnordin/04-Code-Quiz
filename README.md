@@ -2,6 +2,8 @@
 
 Tried to use replaceChild instead of removeChild and appendChild in order to be more efficient. However, research indicated that in doing so, I would need to define the variables for the following Question Page's elements within each function rather than defining them once and being done.
 
+## Much later on, I learned about the innerHTML = "" trick... I could have been u sing this to clear the mainContent after every button click rather than using removeChild for every single one.
+
 WHEN I answer a question incorrectly
 THEN time is subtracted from the clock
 
