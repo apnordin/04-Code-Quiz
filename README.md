@@ -20,3 +20,6 @@ THEN time is subtracted from the clock
 - Entering initials into the form and clicking Submit brings you to the High Score page with initials and score displayed
 
 ** Have not yet successfully incorporated local storage to allow for storage/ranking of high scores
+
+Link:
+https://apnordin.github.io/04-Code-Quiz/
